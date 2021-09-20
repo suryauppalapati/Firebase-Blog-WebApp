@@ -14,9 +14,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
-
-
-
 function signIn() {
 
   var email = document.getElementById("email");
