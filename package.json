@@ -1,0 +1,15 @@
+{
+  "name": "firebase",
+  "version": "1.0.0",
+  "main": "https://fir-blog-2af03.web.app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^9.0.2"
+  },
+  "description": ""
+}

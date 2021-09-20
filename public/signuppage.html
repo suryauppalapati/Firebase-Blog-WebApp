@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="./scripts/login.js"></script>
+    <link rel="stylesheet" href="./styles.css" type="text/css">
+    <title>Sign Up Page</title>
+</head>
+<body>
+      
+   <div class="main"> 
+       <div class="login">
+
+        <h2>User Signup</h2>
+        
+        <label>Name</label> <br>
+        <input type="text" id="userName" required>  <br><br>
+        <label>Email Address</label> <br>
+        <input type="email" id="email" required><br> <br>
+        <label>Password</label> <br>
+        <input type="password" id="password" required> <br><br>
+ 
+        <button onclick="signUp()" class="btn btn-dark"> Sign Up</button> <br> <br>
+        <button onclick="window.location.href='index.html'" class="btn btn-dark">Sign In</button><br><br>
+       </div>  
+</div>   
+</body>
+</html>
+

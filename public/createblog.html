@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Blogs</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <link rel="stylesheet" href="./style.css" type="text/css">
+
+  <style>
+
+  </style>
+
+  <script type="text/javascript">
+    //checking if user is logged in-- to access page
+    initApp = function () {
+      firebase.auth().onAuthStateChanged(function (user) {
+        if (user) {
+          var currentUser = firebase.auth().currentUser;
+          console.log(currentUser);
+        } else {
+          window.location = 'index.html';
+        }
+      }, function (error) {
+        console.log(error);
+      });
+    };
+
+    window.addEventListener('load', function () {
+      initApp()
+    });
+    console.log('Reached here inside state');
+  </script>
+
+  <style>
+    .btn-info{
+     margin-left: 800px;
+    }
+    </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <a class="navbar-brand" href="Homepage.html">MEMEGRAM</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="createblog.html">Create New blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Homepage.html" onclick="getData()">All Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Homepage.html" onclick="userData()">My Posts</a>
+        </li>  
+        <a href="#" class="btn btn-info btn-md bg-danger" onclick="signOut()">
+            <span class="glyphicon glyphicon-log-out bg-danger" ></span> Log out
+          </a>
+      </ul>
+    </div>
+  </nav>
+
+  <br> <br>
+  <div class="container mt-2">
+    <div class="card">
+      <div class="card-body">
+        <form id="post-form">
+          <h4>Write a post..</h4>
+          <textarea id="post" class="form-control" cols="30" rows="8">  </textarea> <br>
+          <input type="file" class="form-control" id="image" accept="images/*">
+          <div class="text-center"> <br>
+            <button type="button" id="uploads" class="btn btn-success" onclick="upload()">Upload</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyA7T912hi4I4EdRE0FDHGddpQu9D4UQWSs",
+      authDomain: "fir-blog-2af03.firebaseapp.com",
+      databaseURL: "https://fir-blog-2af03-default-rtdb.firebaseio.com",
+      projectId: "fir-blog-2af03",
+      storageBucket: "fir-blog-2af03.appspot.com",
+      messagingSenderId: "661961356189",
+      appId: "1:661961356189:web:2aa1f2d34878a02ff5b574",
+      measurementId: "G-CVNT6L9B4V"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
+
+  <script src="./scripts/Homepage.js"></script>
+
+</body>
+
+</html>

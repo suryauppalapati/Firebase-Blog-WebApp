@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+        background-image: url("https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80");
+        background-size: cover;
+}
+
+div.main{
+    width: 400px;
+    margin: 100px 640px 0px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+div.login{
+    background-color: rgba(225, 226, 222, 0.5);
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid rgba(221, 138, 138, 0.3);
+    box-shadow: 1px 1px 100px rgba(2, 0, 0, 0.2);
+}
+
+.nav-item-logout{
+    margin-left: 100px;
+}
+
+label{
+    font-size: 15px;
+}
+
+input{
+    font-size: 15px;
+}
+
+.navbar{
+    background: rgba(0,0,0,0.6);
+    padding: 1.2rem;
+}
+
+.navbar-brand{
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.navbar-nav{
+    text-align: center;
+}
+
+.navbar-nav a{
+    text-transform: uppercase;
+    font-family: var(--Roboto);
+    font-weight: 500;
+    color: #fff;
+    display: inline-block;
+}
+
+.container{
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+
+}
+
+
